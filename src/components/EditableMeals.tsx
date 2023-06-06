@@ -6,7 +6,7 @@ type mealProps= {
 const EditableMeals = ({meals} : {meals: mealProps[]}) => {
     return (
         <div id="meal">
-            {meals.map((meal) => (
+            {meals && meals.map((meal) => (
                 <div className = "meal-item">
                 <div className = "meal-img">
                 

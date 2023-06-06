@@ -1,8 +1,14 @@
 'use client'
-import { useState } from "react";
-
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 const SearchBar = () => {
     const [query , setQuery] = useState("");
+    const router= useRouter();
+    const onSearch = (e: React.FormEvent) => {
+        e.preventDefault()
+        const encodedSearchQuery = encodeURI(query)
+        router.push(`/search?q=${encodedSearchQuery}`)
+    }
     return (
         <>
             <div className= "meal-search">
@@ -11,12 +17,10 @@ const SearchBar = () => {
                 <cite>- Jamie Oliver</cite>
                 </blockquote>
 
-                <div className= "meal-search-box">
+                <form className= "meal-search-box" onSubmit={onSearch}>
                     <input type = "text" className="search-control" placeholder="Enter an ingredient" id = "search-input" onChange={(e) => setQuery(e.target.value) } />
-                    <button type = "submit" className="search-btn btn" id = "search-btn">
-                        Search
-                    </button>
-                </div>
+                    <input type = "submit" className="search-btn btn" id = "search-btn" value="Search"/>
+                </form>
             </div>
         </>
     );

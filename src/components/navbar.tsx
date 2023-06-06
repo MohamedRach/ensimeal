@@ -4,8 +4,8 @@ const Nav = () => {
             <nav className="navbar">
             <div className="nav-center">
                 <div className="nav-header">
-                     <a href="index.html" className="nav-logo">
-                        <img  alt="EnsiMeal" />
+                     <a href="/" className="nav-logo">
+                        EnsiMeal
                     </a>
                     <button className="nav-btn btn">
                         <i className="fas fa-align-justify"></i>
