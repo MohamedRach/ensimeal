@@ -2,7 +2,8 @@
 import LoadingSkeleton from "../components/LoadingSkeleton";
 import { Suspense } from "react";
 import SearchBar from "@/components/searchbar";
-import Meal from "../components/meal";
+import type Meal from "../components/meal";
+
 import Nav from "@/components/navbar";
 
 

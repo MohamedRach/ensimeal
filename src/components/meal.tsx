@@ -8,7 +8,7 @@ const Meal = async () => {
     return (
         <>
             <div className="meal-result">
-                <EditableMeals meals={meals}></EditableMeals>
+                {meals && <EditableMeals meals={meals}></EditableMeals>}
             </div>
         </>
     );

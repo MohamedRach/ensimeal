@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 const SearchBar = () => {
@@ -13,7 +13,7 @@ const SearchBar = () => {
         <>
             <div className= "meal-search">
                 <h2 className= "title">Find Meals For Your Ingredients</h2>
-                <blockquote>Real food doesn't have ingredients, real food is ingredients.<br></br>
+                <blockquote>Real food doesnt have ingredients, real food is ingredients.<br></br>
                 <cite>- Jamie Oliver</cite>
                 </blockquote>
 
