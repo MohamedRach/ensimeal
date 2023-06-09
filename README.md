@@ -18,17 +18,17 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+<p align="center">
+<img src="/public/images/p3-1.png">
+</p>
 
-To learn more about Next.js, take a look at the following resources:
+EnsiMeal is a recipe app that combines various technologies. Built using Next.js, Streaming SSR, Server Components, and Server Actions, along with Prisma and a PostgreSQL database, EnsiMeal offers a platform for discovering and creating delicious recipes.
+The app utilizes Streaming SSR (Server-Side Rendering) to efficiently generate and deliver HTML content to users, resulting in faster page loads and improved performance. This ensures that users can quickly access recipes and related information without delay.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p align="center">
+<img src="/public/images/p3-2.png">
+</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+EnsiMeal also employs Server Components, a Next.js feature that allows for modular server-side rendering. This enables the app to render specific components on the server, reducing the amount of data transferred to the client and enhancing overall performance. The app utilizes Server Action for forms, enabling seamless and secure data submission, validation, and processing.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Prisma, coupled with a PostgreSQL database, serves as the robust backend infrastructure for EnsiMeal. Prisma's intuitive and type-safe query building capabilities simplify database operations and improve productivity. The PostgreSQL database offers reliability, scalability, and strong data integrity, ensuring a seamless recipe management experience.
