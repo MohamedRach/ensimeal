@@ -18,7 +18,7 @@ const Home = () => {
         <div className = "meal-result">
                 <h2 className = "title">Your Recipes:</h2>
         <Suspense fallback = {<LoadingSkeleton />}>
-          {/* @ts-expect-error Async Server Component */}
+          
           <Meal></Meal>
         </Suspense>
         </div>
