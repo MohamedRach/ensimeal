@@ -23,7 +23,7 @@ const AddRecipe = () => {
         }
         
         await prisma.recipe.create({data: {title, description, prep_time:prepp_time}})
-        fetch("http://localhost:3000/api/revalidate?path=/&secret=MOHAMED");
+        fetch("http://localhost:3000/api/revalidate?path=/&secret=MOHAMED"); // revalidation
         redirect("/");
     }
     return (

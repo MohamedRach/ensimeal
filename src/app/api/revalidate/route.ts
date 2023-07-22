@@ -1,5 +1,5 @@
 //http://localhost:3000/api/revalidate?path:/
-
+// revalidate api
 import { NextRequest, NextResponse } from 'next/server'
 import { revalidatePath } from 'next/cache'
  
