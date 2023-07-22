@@ -1,6 +1,8 @@
+
 import { redirect } from "next/navigation";
 import { type } from "os";
 import { prisma } from '../db'
+import Form from "@/components/form";
 const AddRecipe = () => {
     async function createRecipe(data: FormData){
         "use server"
@@ -28,15 +30,7 @@ const AddRecipe = () => {
     }
     return (
         <form action={createRecipe} method="POST">
-            <div className="form-container">
-                <label htmlFor="title">Title</label>
-                <input type="text" name="title" id="title" />
-                <label htmlFor="description">Description</label>
-                <input type="text" name="description" />
-                <label htmlFor="prep_time">Preparation time</label>
-                <input type="number" name="prep_time" id="prep_time" />
-                <input className="submit" type="submit" value="Add recipe" />
-            </div>
+            <Form></Form>
             
         </form>
     );

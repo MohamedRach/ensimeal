@@ -1,17 +1,28 @@
 "use client"
 import { useState } from "react";
 import RecipePopUp from "./RecipePopUp";
+import useStore from "@/app/store";
 type mealProps= {
-    title: string
-    description: string
-    prep_time: number
+    title?: string
+    description?: string
+    prep_time?: number
 }
 const EditableMeals = ({meals} : {meals: mealProps[]}) => {
     const [isOpen, setIsOpen] = useState(false)
+    const store = useStore()
+    if(store.meals.length === 0){
+        store.setMeals(meals)
+    } else if(store.meals.length === 1){
+        store.meals.forEach(meall => (
+            meals.push(meall)
+        ))
+        store.setMeals(meals)
+    }
+    console.log(store.meals)
     return (
         <>
         <div id="meal">
-            {meals && meals.map((meal , i) => (
+            {store.meals && store.meals.map((meal , i) => (
                 <div className = "meal-item" key={i}>
                 <div className = "meal-img">
                 
