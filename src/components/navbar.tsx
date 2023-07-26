@@ -2,21 +2,10 @@ const Nav = () => {
     return (
         <div>
             <nav className="navbar">
-            <div className="nav-center">
-                <div className="nav-header">
-                     <a href="/" className="nav-logo">
-                        EnsiMeal
-                    </a>
-                    <button className="nav-btn btn">
-                        <i className="fas fa-align-justify"></i>
-                    </button>
-                 </div>
-                 <div className="nav-links">
-                    <div className="nav-link contact-link">
-                        <a href="/add" className="btn"> add recipe </a>
-                     </div>
-                </div>
-            </div>
+               <div className="nav-link">
+                    <a href="/" className="logo">EnsiMeal.</a>
+                    <a href="/add" className="add">Add Recipe</a>
+               </div>
          </nav>
         </div>
     );

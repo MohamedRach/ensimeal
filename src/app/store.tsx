@@ -1,6 +1,7 @@
 import { create } from "zustand";
 
 type Meal = {
+    id?: number,
     title?: string,
     description?: string,
     ingredients?: string,
