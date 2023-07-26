@@ -11,6 +11,8 @@ model Recipe {
   id        Int     @id @default(autoincrement())
   title     String
   description   String
+  ingredients String
+  recipe String
   prep_time Int
   
 }

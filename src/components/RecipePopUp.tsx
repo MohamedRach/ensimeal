@@ -1,6 +1,12 @@
 import { Dispatch, SetStateAction } from "react";
-
-const RecipePopUp = ({open, setIsOpen}: {open: boolean, setIsOpen: Dispatch<SetStateAction<boolean>>}) => {
+type mealProps= {
+    title?: string
+    description?: string
+    ingredients?: string
+    recipe?: string
+    prep_time?: number
+}
+const RecipePopUp = ({open, setIsOpen, meal}: {open: boolean, setIsOpen: Dispatch<SetStateAction<boolean>>, meal:mealProps}) => {
     if (!open) return null;
     return (
         <div  className='overlay'>
@@ -16,11 +22,11 @@ const RecipePopUp = ({open, setIsOpen}: {open: boolean, setIsOpen: Dispatch<SetS
                 X
             </p>
             <div className='content'>
-                <h1 className="center-text">chicken tagine</h1>
-                <p className="center-text">this is the perfect meal for your a cozy lunch </p>
-                <p><span>preparation time:</span> 30 min</p>
-                <p><span>Ingredients:</span> chicken, vegetables, spices</p>
-                <p><span>Recipe:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam velit eaque nobis necessitatibus voluptate consequatur, optio quas eum quaerat ipsa alias numquam minus, error maiores, harum pariatur perspiciatis quam repudiandae.</p>
+                <h1 className="center-text">{meal.title}</h1>
+                <p className="center-text">{meal.description} </p>
+                <p><span>preparation time:</span> {meal.prep_time}</p>
+                <p><span>Ingredients:</span> {meal.ingredients}</p>
+                <p><span>Recipe:</span> {meal.recipe}</p>
             </div>
             
             </div>

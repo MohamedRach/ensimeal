@@ -3,6 +3,8 @@ import { create } from "zustand";
 type Meal = {
     title?: string,
     description?: string,
+    ingredients?: string,
+    recipe?: string,
     prep_time?: number
 }
 const addMeal = (meals: Meal[], meal: Meal): Meal[] => [

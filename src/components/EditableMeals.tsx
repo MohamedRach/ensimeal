@@ -5,6 +5,8 @@ import useStore from "@/app/store";
 type mealProps= {
     title?: string
     description?: string
+    ingredients?: string
+    recipe?: string
     prep_time?: number
 }
 const EditableMeals = ({meals} : {meals: mealProps[]}) => {
@@ -32,7 +34,7 @@ const EditableMeals = ({meals} : {meals: mealProps[]}) => {
                 <p>{meal.description}</p>
                 <p>prep time : {meal.prep_time} min</p>
                 <a className = "recipe-btn" onClick={() => setIsOpen(true)}>Get Recipe</a>
-                {isOpen && <RecipePopUp open = {isOpen} setIsOpen = {setIsOpen}></RecipePopUp>}
+                {isOpen && <RecipePopUp open = {isOpen} setIsOpen = {setIsOpen} meal = {meal}></RecipePopUp>}
                 </div>
                 </div>
             ))}
