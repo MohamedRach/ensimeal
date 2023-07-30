@@ -32,7 +32,7 @@ const AddRecipe = () => {
             throw new Error("Invalid recipe");
         }
         await prisma.recipe.create({data: {title, description, ingredients, recipe, prep_time:prepp_time}})
-        fetch("https://ensimeal.vercel.app/api/revalidate?path=/&secret=MOHAMED"); // revalidation
+        fetch("http://localhost:3000/api/revalidate?path=/&secret=MOHAMED"); // revalidation
         redirect("/");
     }
     return (
